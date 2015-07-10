@@ -1,5 +1,6 @@
 body{
     background: black;
+    font-size: 22px;
 }
 
 .container {
@@ -11,6 +12,7 @@ body{
 header{
 	text-align: center;
 	padding: 20px;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -21,16 +23,23 @@ header{
 }
 
 .block {
+    box-sizing: border-box;
 	background-color: #dae124;
 	border-top-left-radius: 10px;
 	width: 100%;
-	padding: 10px;
+	padding: 20px 40px;
     margin-top: 20px;
+    font-size: 18px;
+    line-height: 36px;
+}
+
+.block input {
+    height: 24px;
 }
 
 .block-header {
     padding-left: 15px;
-    margin-top: 30px;
+    margin-top: 40px;
     font-size: 30px;
     color: white;
 }
@@ -51,6 +60,83 @@ header{
     margin: 0 auto;
 }
 
+.control-basic input {
+    width: 122px;
+}
+
+.input-xmini {
+    width: 35px;
+}
+
+.btn {
+    background-color: #fff;
+    width: 76px;
+    height: 76px;
+    position: relative;
+    margin-left: 20px;
+}
+
+.btn::before, .btn::after{
+    content: '';
+    position: absolute;
+    display: block;
+    background-color: #555;
+    border: 3px solid #555;
+}
+
+.btn::after {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.btn-add:before, .btn-add:after, .btn-minus:before {
+    top: 50%;
+    left: 50%;
+    margin: -4px 0 0 -28px;
+    width: 48px;
+    height: 2px;
+}
+
+.btn input[type=file] {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+button[type="submit"] {
+    background-color: #dae124;
+    width: 310px;
+    height: 60px;
+    border-radius:10px;
+    box-sizing: border-box;
+    padding: 10px 30px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.control-btn-file {
+    margin: 30px 20px;
+}
+
+.block-title {
+    padding-left: 25px;
+    position: relative;
+}
+
+.block-title::before {
+    content: '';
+    width: 18px;
+    height: 14px;
+    background-color: #dae124;
+    position: absolute;
+    left: -5px;
+    top: 12px;
+}
+
 /* over write*/
 .ml0 {
     margin-left: 0!important;
@@ -58,4 +144,9 @@ header{
 
 .font30 {
     font-size: 30px;
+}
+
+.hint {
+    color: white;
+    margin-top: 5px;
 }
