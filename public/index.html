@@ -1,0 +1,121 @@
+<html>
+<head>
+	<title>Nike Run</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo"></div>
+        </header>
+        <form class="form-horizontal" method="post" enctype="multipart/form-data" action="/">
+            <fieldset class="block">
+                <div class="controls ml0 control-basic">
+                    姓名: <input type="text" name="name" class="input-small" required placeholder="必填"/>
+                    性别: <input type="text" name="gender" class="wd100" required placeholder="必填"/>
+                    出生年月日:<input type="date" name="birthday" class="wd153"/>
+                </div>
+                <div class="controls ml0">
+                    联系方式: <input type="text" name="contact" class="full-width" required placeholder="必填" style="width: 495px;"/>
+                </div>
+                <div class="controls ml0 ctrl-normal">
+                    身份证号码: <input type="text" name="id-number" class="full-width" required placeholder="必填" style="width: 477px;"/>
+                </div>
+                <div class="controls ml0 ctrl-normal">
+                    NIKE+账号: <input type="text" name="account" class="full-width" style="width: 480px;"/>
+                </div>
+                <div class="controls ml0 ctrl-normal">
+                    常住地址: <input type="text" name="address" class="full-width" style="width: 495px;"/>
+                </div>
+            </fieldset>
+
+            <fieldset class="block">
+                <div>
+                    <span>全程马拉松最好成绩</span>
+                </div>
+                <div class="controls ml0">
+                    成绩: <input type="text" name="fb-hour" class="input-xmini"/>小时
+                    <input type="text" name="fb-minute" class="input-xmini"/>分
+                    <input type="text" name="fb-second" class="input-xmini"/>秒，
+                    赛事名称：<input type="text" name="fb-hour" class="input-mini"/>
+                    参赛号码：<input type="text" name="fb-number" class="input-mini"/>
+                </div>
+                <div>
+                    <span>半程马拉松最好成绩</span>
+                </div>
+                <div class="controls ml0">
+                    成绩: <input type="text" name="hb-hour" class="input-xmini"/>小时
+                    <input type="text" name="hb-minute" class="input-xmini"/>分
+                    <input type="text" name="hb-second" class="input-xmini"/>秒，
+                    赛事名称：<input type="text" name="hb-hour" class="input-mini"/>
+                    参赛号码：<input type="text" name="hb-number" class="input-mini"/>
+                </div>
+            </fieldset>
+
+            <fieldset class="block">
+                <div>
+                    <span>全程马拉松最近成绩</span>
+                </div>
+                <div class="controls ml0">
+                    成绩: <input type="text" name="fn-hour" class="input-xmini"/>小时
+                    <input type="text" name="fn-minute" class="input-xmini"/>分
+                    <input type="text" name="fn-second" class="input-xmini"/>秒，
+                    赛事名称：<input type="text" name="fn-hour" class="input-mini"/>
+                    参赛号码：<input type="text" name="fn-number" class="input-mini"/>
+                </div>
+                <div>
+                    <span>半程马拉松最近成绩</span>
+                </div>
+                <div class="controls ml0">
+                    成绩: <input type="text" name="hn-hour" class="input-xmini"/>小时
+                    <input type="text" name="hn-minute" class="input-xmini"/>分
+                    <input type="text" name="hn-second" class="input-xmini"/>秒，
+                    赛事名称：<input type="text" name="hn-hour" class="input-mini"/>
+                    参赛号码：<input type="text" name="hn-number" class="input-mini"/>
+                </div>
+            </fieldset>
+            <p class="hint">＊请如实填写，若没有该项目成绩请选择“无”</p>
+            <div class="block-header">
+                <span class="block-title">个人关于跑步的训练理念</span>
+            </div>
+            <fieldset class="block">
+                <textarea name="concept" class="row-fluid"></textarea>
+            </fieldset>
+            <div class="block-header">
+                <span class="block-title">作为一名优秀的pacer需要哪些特质？</span>
+            </div>
+            <fieldset class="block">
+                <textarea name="category" class="row-fluid"></textarea>
+            </fieldset>
+            <div class="block-header">
+                <span class="block-title">上传近期NIKE＋训练数据截图</span>
+            </div>
+            <div class="control-btn-file">
+                <div class="btn btn-add">
+                    <input type="file" name="files" class="upload-file" onchange="PreviewImage()"/>
+                    <img class="upload-preview hide"/>
+                </div>
+                <div class="fn-imgs"></div>
+            </div>
+
+            <div class="controls">
+                <button class="btn-submit" type="submit">提交</button>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript">
+         function PreviewImage() {
+            var oFReader = new FileReader();
+            oFReader.readAsDataURL(document.querySelector(".upload-file").files[0]);
+
+            oFReader.onload = function(oFREvent) {
+              var $preview = document.querySelector(".upload-preview")
+              $preview.src = oFREvent.target.result;
+              $preview.classList.remove('hide');
+            };
+          };
+    </script>
+</body>
+</html>

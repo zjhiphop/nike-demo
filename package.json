@@ -1,0 +1,25 @@
+{
+  "name": "nike",
+  "version": "1.0.0",
+  "description": "Nike Run",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.13.1",
+    "mongoose": "^4.0.6",
+    "multer": "^0.1.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zjhiphop/nike-demo"
+  },
+  "author": "zjhiphop",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zjhiphop/nike-demo/issues"
+  },
+  "homepage": "https://github.com/zjhiphop/nike-demo"
+}
