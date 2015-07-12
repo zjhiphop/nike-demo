@@ -6,6 +6,10 @@ var InfoModel  = require('./db/info-model');
 DB.connect();
 
 var app = express();
+
+app.set('views', './views');
+app.set('view engine', 'jade');
+
 var upload = multer({
     dest: 'public/uploads/',
     rename: function (fieldname, filename, req, res) {
@@ -24,6 +28,29 @@ app.get('/list', function(req, res, next) {
         res.send(data);
     });
 });
+
+app.get('/show/list', function(req, res, next) {
+
+    InfoModel.find({}, function(data) {
+        var tplData =  data.map(function(item) {
+            var result = {};
+            var o = JSON.parse(JSON.stringify(item));
+
+            Object.keys(o).forEach(function(idx) {
+               if(idx.indexOf('_') !== 0 ) {
+                    result[idx] = o[idx];
+               }
+            });
+
+            return result;
+        });
+
+        res.render('result', {
+            data: tplData
+        });
+    });
+});
+
 
 app.get('/upload/:id', function(req, res, next) {
     InfoModel.find({'id-number': req.params.id}, function(data) {

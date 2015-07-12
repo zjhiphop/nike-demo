@@ -1,0 +1,11 @@
+doctype html
+html(lang="en")
+  head
+    title= pageTitle
+  body
+    h1 统计结果
+    table
+        each item in data
+           tr
+              each val in item
+                td= val
