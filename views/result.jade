@@ -2,10 +2,22 @@ doctype html
 html(lang="en")
   head
     title= pageTitle
+    link(rel="stylesheet" type="text/css" href="/css/bootstrap.css")
+    link(rel="stylesheet" type="text/css" href="/css/bootstrap-responsive.css")
+    link(rel="stylesheet" type="text/css" href="/css/main.css")
+
   body
     h1 统计结果
-    table
-        each item in data
-           tr
-              each val in item
-                td= val
+    table(class="table table-bordered")
+        thead
+            each item in data.heads
+                th= item
+        tbody
+            each item in data.list
+                tr
+                   each val in item
+                        if val.indexOf('/uploads/') > -1
+                            td
+                              img(src="#{val}")
+                        else
+                            td= val

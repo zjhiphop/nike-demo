@@ -4,7 +4,6 @@
 }
 
 body{
-    background: black;
     font-size: 22px;
     font-family: 'FZZZHUNHJW';
 }
@@ -13,6 +12,8 @@ body{
     width: 750px;
     padding: 20px;
     margin: 0 auto;
+    background: url(../imgs/bg.png) center center no-repeat;
+    background-size: cover;
 }
 
 header{
@@ -26,12 +27,13 @@ header{
     width: 194px;
     height:239px;
     display: inline-block;
+    margin: 100px 0 100px 0;
 }
 
 .block {
     box-sizing: border-box;
 	background-color: #dae124;
-	border-top-left-radius: 10px;
+	border-top-left-radius: 30px;
 	width: 100%;
 	padding: 20px 40px;
     margin-top: 20px;
@@ -132,6 +134,7 @@ button[type="submit"] {
     padding: 10px 30px;
     font-weight: bold;
     font-size: 22px;
+    maring-top: 30px;
 }
 
 .control-btn-file {
@@ -173,4 +176,20 @@ button[type="submit"] {
 .hint {
     color: white;
     margin-top: 5px;
+    font-size: 18px;
+}
+
+.success-title {
+    font-size: 136px;
+    line-height: 140px;
+    font-weight: bold;
+}
+
+.success-body {
+    text-align: center;
+    font-weight: bold;
+}
+
+.success-block {
+    margin-bottom: 480px;
 }
