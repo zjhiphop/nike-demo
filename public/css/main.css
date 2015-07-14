@@ -1,6 +1,12 @@
+@font-face {
+  font-family: 'FZZZHUNHJW';
+  src: url('../FZZZHUNHJW_0.TTF')  format('truetype'), /* Safari, Android, iOS */
+}
+
 body{
     background: black;
     font-size: 22px;
+    font-family: 'FZZZHUNHJW';
 }
 
 .container {
