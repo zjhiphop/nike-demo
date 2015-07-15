@@ -94,7 +94,7 @@ app.get('/show/list', function(req, res, next) {
             Object.keys(trans).forEach(function(key) {
                 if(key.indexOf('-hour') > -1 && item[key]) {
                     prefix = key.split('-')[0];
-                    d.push([(item[prefix + '-hour'] || 0), (item[prefix + '-minute'] || 0) + (item[prefix + '-second'] || 0)].join('/'));
+                    d.push((item[prefix + '-hour'] || 0) + 'h' + (item[prefix + '-minute'] || 0) + 'm' + (item[prefix + '-second'] || 0) + 's');
                 } else {
                     d.push(item[key] || '');
                 }
