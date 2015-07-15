@@ -193,3 +193,7 @@ button[type="submit"] {
 .success-block {
     margin-bottom: 480px;
 }
+
+.table th,.table td {
+    white-space: nowrap;
+}

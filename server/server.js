@@ -7,31 +7,37 @@ DB.connect();
 
 var app = express();
 var trans = {
-    "account": "账户"
+    "file_path": "截图"
+    ,"account": "账户"
     ,"address": "地址"
     ,"birthday": "生日"
     ,"contact": "联系方式"
     ,"id-number": "身份证号"
     ,"gender": "性别"
-    ,"file_path": "截图"
-    ,"fb-hour": "全程最佳(时)"
-    ,"fb-minute": "全程最佳(分)"
+//    ,"fb-minute": "全程最佳(分)"
+//    ,"fb-second": "全程最佳(秒)"
+
     ,"fb-name": "全程最佳(名称)"
     ,"fb-number": "全程最佳(号码)"
-    ,"fb-second": "全程最佳(秒)"
-    ,"fn-hour": "全程最近(时)"
-    ,"fn-minute": "全程最近(分)"
+    ,"fb-hour": "全程最佳(时/分/秒)"
+
+//    ,"fn-minute": "全程最近(分)"
+//    ,"fn-second": "全程最近(秒)"
+    ,"fn-name": "全程最近(名称)"
     ,"fn-number": "全程最近(号码)"
-    ,"fn-name": "全程最近(秒)"
-    ,"fn-second": "全程最近(秒)"
-    ,"hb-hour": "半程最佳(时)"
-    ,"hb-minute": "半程最佳(分)"
+    ,"fn-hour": "全程最近(时/分/秒)"
+
+    ,"hb-name": "半程最佳(名称)"
     ,"hb-number": "半程最佳(号码)"
-    ,"hb-second": "半程最佳(秒)"
-    ,"hn-hour": "全程最近(时)"
-    ,"hn-minute": "全程最近(分)"
-    ,"hn-number": "全程最近(号码)"
-    ,"hn-second": "全程最近(秒)"
+    ,"hb-hour": "半程最佳(时/分/秒)"
+//    ,"hb-minute": "半程最佳(分)"
+//    ,"hb-second": "半程最佳(秒)"
+
+    ,"hn-name": "半程最近(名称)"
+    ,"hn-number": "半程最近(号码)"
+    ,"hn-hour": "半程最近(时/分/秒)"
+//    ,"hn-minute": "半程最近(分)"
+//    ,"hn-second": "半程最近(秒)"
 };
 
 app.set('views', './views');
@@ -83,9 +89,15 @@ app.get('/show/list', function(req, res, next) {
 
         tplData.forEach(function(item) {
             var d = [];
+            var prefix;
 
             Object.keys(trans).forEach(function(key) {
-                d.push(item[key] || '');
+                if(key.indexOf('-hour') > -1 && item[key]) {
+                    prefix = key.split('-')[0];
+                    d.push([(item[prefix + '-hour'] || 0), (item[prefix + '-minute'] || 0) + (item[prefix + '-second'] || 0)].join('/'));
+                } else {
+                    d.push(item[key] || '');
+                }
             });
 
             renderData.list.push(d);
