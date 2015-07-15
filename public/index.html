@@ -14,15 +14,15 @@
         <form class="form-horizontal" method="post" enctype="multipart/form-data" action="/">
             <fieldset class="block">
                 <div class="controls ml0 control-basic">
-                    姓名: <input type="text" name="name" class="input-small" required placeholder="必填"/>
-                    性别: <input type="text" name="gender" class="wd100" required placeholder="必填"/>
+                    姓名: <input type="text" name="name" title="姓名" class="input-small required" placeholder="必填"/>
+                    性别: <input type="text" name="gender" title="性别" class="wd100 required" placeholder="必填"/>
                     出生年月日:<input type="date" name="birthday" placeholder="年月日" class="wd245"/>
                 </div>
                 <div class="controls ml0">
-                    联系方式: <input type="text" name="contact" class="full-width" required placeholder="必填" style="width: 585px;"/>
+                    联系方式: <input type="text" name="contact" title="联系方式" class="full-width required"  placeholder="必填" style="width: 585px;"/>
                 </div>
                 <div class="controls ml0 ctrl-normal">
-                    身份证号码: <input type="text" name="id-number" class="full-width" required placeholder="必填" style="width: 567px;"/>
+                    身份证号码: <input type="text" name="id-number" title="身份证号码" class="full-width required" placeholder="必填" style="width: 567px;"/>
                 </div>
                 <div class="controls ml0 ctrl-normal">
                     NIKE+账号: <input type="text" name="account" class="full-width" style="width: 570px;"/>
@@ -107,7 +107,7 @@
         </form>
     </div>
     <script type="text/javascript">
-         function PreviewImage() {
+        function PreviewImage() {
             var oFReader = new FileReader();
             oFReader.readAsDataURL(document.querySelector(".upload-file").files[0]);
 
@@ -116,7 +116,30 @@
               $preview.src = oFREvent.target.result;
               $preview.classList.remove('hide');
             };
-          };
+        };
+
+        document.querySelector('.btn-submit').onclick = function(e) {
+            var $req = document.querySelectorAll('.required');
+            var len = $req.length;
+            var isValid = true;
+            var title;
+
+            while(--len) {
+                if($req.item(len).value === "") {
+                    isValid = false;
+                    title = $req.item(len).getAttribute('title');
+                    break;
+                } 
+            }    
+
+            if(!isValid) {
+                alert('Sorry, "' + title + '" 为必填项!');
+
+                e.preventDefault();
+                return false;
+            }
+
+        }
     </script>
 </body>
 </html>

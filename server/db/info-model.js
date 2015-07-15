@@ -6,6 +6,12 @@ module.exports = {
     save: function(data, cb) {
         var instance = new InFo(data);
 
+        if(!data['id-number'])  {
+            console.log('!!document not saved. id number is null!!');
+
+            return;
+        }   
+
         return instance.save(function() {
             console.log('document saved. id number is:', data['id-number']);
         });
