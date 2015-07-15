@@ -6,6 +6,7 @@ var Info = new Schema({
     "address": String,
     "birthday": String,
     "contact": String,
+    "name": String,
 
     "fb-hour": String,
     "fb-minute": String,

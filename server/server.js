@@ -8,6 +8,7 @@ DB.connect();
 var app = express();
 var trans = {
     "file_path": "截图"
+    ,"name": "姓名"
     ,"account": "账户"
     ,"address": "地址"
     ,"birthday": "生日"
