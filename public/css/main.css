@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'FZZZHUNHJW';
-  src: url('../FZZZHUNHJW_0.TTF')  format('truetype'), /* Safari, Android, iOS */
+  src: url('../font/FZZZHUNHJW_0.TTF')  format('truetype');
 }
 
 body{
@@ -80,7 +80,7 @@ header{
 }
 
 .input-xxmini {
-    width: 98px;
+    width: 96px;
 }
 
 .btn{
