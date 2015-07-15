@@ -64,6 +64,7 @@ header{
     height: 30px;
     padding: 10px 30px;
     margin: 0 auto;
+    display: block;
 }
 
 .control-basic input {
@@ -78,7 +79,7 @@ header{
     width: 96px;
 }
 
-.btn{
+.btn {
     background-color: #fff;
     width: 76px;
     height: 76px;
@@ -158,8 +159,8 @@ button[type="submit"] {
     width: 100px!important;
 }
 
-.wd245{
-    width: 245px!important;
+.wd240{
+    width: 240px!important;
 }
 
 /* over write*/
