@@ -1,5 +1,5 @@
 @font-face {
   font-family: 'FZZZHUNHJW';
   src: local('☺'),             /* sneakily trick IE */
-        url('../font/FZZZHUNHJW_0.ttf') format('truetype');    /* FF 3.6, Chrome 5, IE9 */
+        url('../font/FZZZHUNHJW.ttf') format('truetype');    /* FF 3.6, Chrome 5, IE9 */
 }
