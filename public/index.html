@@ -14,7 +14,11 @@
             <fieldset class="block">
                 <div class="controls ml0 control-basic">
                     姓名: <input type="text" name="name" title="姓名" class="input-small required" placeholder="必填"/>
-                    性别: <input type="text" name="gender" title="性别" class="wd100 required" placeholder="必填"/>
+                    性别: <select name="gender" title="性别" class="wd100 required" placeholder="必填">
+                            <option>请选择</option>
+                            <option value="男">男</option>
+                            <option value="女">女</option>
+                        </select>
                     出生年月日:<input type="date" name="birthday" placeholder="年月日" style="width: 200px;"/>
                 </div>
                 <div class="controls ml0">
@@ -84,7 +88,7 @@
                 <textarea name="concept" class="row-fluid"></textarea>
             </fieldset>
             <div class="block-header">
-                <span class="block-title">作为一名优秀的pacer需要哪些特质？</span>
+                <span class="block-title">您认为作为一名优秀的pacer需要哪些特质？</span>
             </div>
             <fieldset class="block">
                 <textarea name="category" class="row-fluid"></textarea>
