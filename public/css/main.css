@@ -1,6 +1,6 @@
 body{
     font-size: 22px;
-    font-family: 'FZZZHUNHJW';
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .bg {
@@ -35,8 +35,7 @@ header{
 	width: 100%;
 	padding: 20px 40px;
     margin-top: 20px;
-    font-size: 18px;
-    line-height: 36px;
+    line-height: 40px;
 }
 
 .block input {
@@ -53,18 +52,25 @@ header{
 .block-header::before {
     contet: '';
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: 14px;
+    height: 14px;
     text-shadow: 0 0 1px 1px;
     background-color: #dae124;
 }
 
 .btn-submit {
-    width: 100px;
-    height: 30px;
+    width: 315px;
+    height: 70px;
     padding: 10px 30px;
-    margin: 40px auto 20px auto;
+    margin: 50px auto 20px auto;
     display: block;
+    border-radius: 12px;    
+    background-color: #dae124;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-size: 22px;
+    border: none;
+    box-shadow: -2px -2px #34331e;
 }
 
 .control-basic input {
@@ -81,8 +87,8 @@ header{
 
 .btn {
     background-color: #fff;
-    width: 76px;
-    height: 76px;
+    width: 72px;
+    height: 72px;
     position: relative;
     margin-left: 20px;
 }
@@ -114,6 +120,10 @@ header{
     height: 2px;
 }
 
+.btn-add {
+    box-shadow: 3px 3px #dae124;
+}
+
 .btn input[type=file] {
     opacity: 0;
     position: absolute;
@@ -122,18 +132,6 @@ header{
     cursor: pointer;
     width: 100%;
     height: 100%;
-}
-
-button[type="submit"] {
-    background-color: #dae124;
-    width: 310px;
-    height: 60px;
-    border-radius:10px;
-    box-sizing: border-box;
-    padding: 10px 30px;
-    font-weight: bold;
-    font-size: 22px;
-    maring-top: 30px;
 }
 
 .control-btn-file {
@@ -147,12 +145,17 @@ button[type="submit"] {
 
 .block-title::before {
     content: '';
-    width: 18px;
-    height: 14px;
+    width: 15px;
+    height: 15px;
     background-color: #dae124;
     position: absolute;
+    box-shadow: 1px 1px #ffffff;
     left: -5px;
-    top: 12px;
+    top: 8px;
+}
+
+.font18 {
+    font-size: 18px;
 }
 
 .wd100{
@@ -161,6 +164,10 @@ button[type="submit"] {
 
 .wd240{
     width: 240px!important;
+}
+
+.wd200{
+    width: 200px!important;
 }
 
 /* over write*/
@@ -174,7 +181,7 @@ button[type="submit"] {
 
 .hint {
     color: white;
-    margin-top: 5px;
+    margin: 10px auto auto 38px;
     font-size: 18px;
 }
 

@@ -3,3 +3,7 @@
   src: local('☺'),             /* sneakily trick IE */
         url('../font/FZZZHUNHJW_0.ttf') format('truetype');    /* FF 3.6, Chrome 5, IE9 */
 }
+
+body{
+    font-family: 'FZZZHUNHJW', 'Arial';
+}
