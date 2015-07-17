@@ -21,16 +21,17 @@ header{
 }
 
 .logo {
-	background: url(../imgs/logo.png) 0 0 no-repeat;
-    width: 422px;
-    height:129px;
+    background: url(../imgs/logo.png) 0 0 no-repeat;
+    width: 270px;
+    height: 320px;
     display: inline-block;
     margin: 100px 0 100px 0;
+    background-size: cover;
 }
 
 .block {
     box-sizing: border-box;
-	background-color: #dae124;
+	background-color: #d4ff45;
 	border-top-left-radius: 30px;
 	width: 100%;
 	padding: 20px 40px;
@@ -55,7 +56,7 @@ header{
     width: 14px;
     height: 14px;
     text-shadow: 0 0 1px 1px;
-    background-color: #dae124;
+    background-color: #d4ff45;
 }
 
 .btn-submit {
@@ -65,7 +66,7 @@ header{
     margin: 50px auto 20px auto;
     display: block;
     border-radius: 12px;    
-    background-color: #dae124;
+    background-color: #d4ff45;
     box-sizing: border-box;
     font-weight: bold;
     font-size: 22px;
@@ -121,7 +122,7 @@ header{
 }
 
 .btn-add {
-    box-shadow: 3px 3px #dae124;
+    box-shadow: 3px 3px #d4ff45;
 }
 
 .btn input[type=file] {
@@ -147,7 +148,7 @@ header{
     content: '';
     width: 15px;
     height: 15px;
-    background-color: #dae124;
+    background-color: #d4ff45;
     position: absolute;
     box-shadow: 1px 1px #ffffff;
     left: -5px;
@@ -197,9 +198,11 @@ header{
 }
 
 .success-block {
-    margin-bottom: 480px;
+  margin-top: 700px;
 }
 
 .table th,.table td {
     white-space: nowrap;
 }
+
+.logo-bottom { margin-top: 140px; text-align: center;}

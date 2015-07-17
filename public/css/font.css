@@ -1,9 +1,17 @@
 @font-face {
-  font-family: 'FZZZHUNHJW';
+  font-family: 'MHeiPRC-Medium';
   src: local('☺'),             /* sneakily trick IE */
-        url('../font/FZZZHUNHJW_0.ttf') format('truetype');    /* FF 3.6, Chrome 5, IE9 */
+        url('../font/MHeiPRC-Medium_0.OTF') format('truetype');    /* FF 3.6, Chrome 5, IE9 */
+}
+
+@font-face {
+  font-family: 'MHeiPRC-Bold';
+  src: local('☺'),             /* sneakily trick IE */
+        url('../font/MHeiPRC-Bold_0.OTF') format('truetype');    /* FF 3.6, Chrome 5, IE9 */
 }
 
 body{
-    font-family: 'FZZZHUNHJW', 'Arial';
+    font-family: 'MHeiPRC-Medium', 'Arial';
 }
+
+

@@ -1,5 +1,6 @@
 var express = require('express');
 var multer  = require('multer');
+var compression  = require('compression');
 var DB  = require('./db/database');
 var InfoModel  = require('./db/info-model');
 
@@ -53,6 +54,9 @@ var upload = multer({
         console.log(file.fieldname + ' uploaded to  ' + file.path)
     }
 });
+
+// compress all requests
+app.use(compression())
 
 // serve static file
 app.use(express.static('public'));
