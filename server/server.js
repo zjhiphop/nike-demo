@@ -136,9 +136,11 @@ app.post('/', [upload, function(req, res, next) {
 
     InfoModel.save(data);
 
-    res.set('Content-Type', 'text/html');
+    // res.set('Content-Type', 'text/html');
 
-    res.sendfile('public/success.html')
+    // res.sendfile('public/success.html')
+
+    res.redirect('http://gow.nike.com.cn/SHMpacer/step4.html');
 }]);
 
 var server = app.listen(3000, function () {
