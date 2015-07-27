@@ -3,6 +3,8 @@ var multer  = require('multer');
 var compression  = require('compression');
 var DB  = require('./db/database');
 var InfoModel  = require('./db/info-model');
+var fs = require('fs');
+var path = require('path')
 
 DB.connect();
 
@@ -56,7 +58,7 @@ var upload = multer({
 });
 
 // compress all requests
-app.use(compression())
+app.use(compression());
 
 // serve static file
 app.use(express.static('public'));
@@ -99,6 +101,11 @@ app.get('/show/list', function(req, res, next) {
             Object.keys(trans).forEach(function(key) {
                 if(key === 'id-number') {
                     item[key] = "'" + item[key];
+                }
+
+                if(key === 'file_path' && item[key]) {
+                    item[key] = 'data:image/' + path.extname(item[key]).substr(1) + ';base64,' 
+                        + fs.readFileSync(__dirname + '/../public' + item[key]).toString('base64');
                 }
 
                 if(key.indexOf('-hour') > -1 && item[key]) {

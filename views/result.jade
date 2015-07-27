@@ -4,7 +4,7 @@ html(lang="en")
     title= pageTitle
     link(rel="stylesheet" type="text/css" href="/css/bootstrap.min.css")
     link(rel="stylesheet" type="text/css" href="/css/main.css")
-    script(type="text/script" src="/js/excellentexport-1.5.js")
+    script(type="text/script" src="/js/excellentexport-1.5/excellentexport.min.js")
 
   body
     h1 统计结果
@@ -14,10 +14,10 @@ html(lang="en")
             each item in data.heads
                 th= item
         tbody
-            each item in data.list
+            each item, key in data.list
                 tr
-                   each val in item
-                        if val.indexOf('/uploads/') > -1
+                   each val, key in item
+                        if key === 0
                             td
                               img(src="#{val}")
                         else
