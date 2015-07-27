@@ -4,10 +4,12 @@ html(lang="en")
     title= pageTitle
     link(rel="stylesheet" type="text/css" href="/css/bootstrap.min.css")
     link(rel="stylesheet" type="text/css" href="/css/main.css")
+    script(type="text/script" src="/js/excellentexport-1.5.js")
 
   body
     h1 统计结果
-    table(class="table table-bordered table-striped table-hover table-condensed")
+    a(download="NikeRun.xls" class="pull-left" href="#" onclick="return ExcellentExport.excel(this, 'datatable', '统计')")  Export to Excel
+    table(class="table table-bordered table-striped table-hover table-condensed" id="datatable")
         thead
             each item in data.heads
                 th= item
