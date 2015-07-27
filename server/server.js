@@ -97,6 +97,10 @@ app.get('/show/list', function(req, res, next) {
             var prefix;
 
             Object.keys(trans).forEach(function(key) {
+                if(key === 'id-number') {
+                    item[key] = "'" + item[key];
+                }
+
                 if(key.indexOf('-hour') > -1 && item[key]) {
                     prefix = key.split('-')[0];
                     d.push((item[prefix + '-hour'] || 0) + 'h' + (item[prefix + '-minute'] || 0) + 'm' + (item[prefix + '-second'] || 0) + 's');
