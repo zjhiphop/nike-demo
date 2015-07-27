@@ -7,7 +7,8 @@
     "express": "^4.13.1",
     "jade": "^1.11.0",
     "mongoose": "^4.0.6",
-    "multer": "^0.1.8"
+    "multer": "^0.1.8",
+    "swig": "^1.4.2"
   },
   "devDependencies": {
     "compression": "^1.5.1"
